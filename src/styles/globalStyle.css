@@ -1,0 +1,45 @@
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color:  #f0f0f0;
+  margin: 0px;
+  padding-bottom:60px ;
+  font-family: 'BYekan';
+  color: rgb(92, 92, 92);
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'BYekan';
+  src: url('../assets/font/BYekan.eot') format('eot'), url('../assets/font/BYekan.ttf') format('truetype'),
+    url('../assets/font/BYekan.woff') format('woff');
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-dir-col {
+  flex-direction: column;
+}
+
+.flex-dir-col-reverse {
+  flex-direction: column-reverse;
+}
+.flex-dir-row {
+  flex-direction: row;
+}
+
+.flex-dir-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.justify-c-center {
+  justify-content: center;
+}
