@@ -3,7 +3,7 @@ import {ThunkAction , ThunkDispatch} from 'redux-thunk'
 import {AnyAction}  from 'redux'
 import {RootState } from '../store'
 
-export const login = 
+export const loginAction = 
 (
     email : string, password: string
 ) : ThunkAction<Promise<void> , RootState , unknown , AnyAction> =>
@@ -11,11 +11,21 @@ export const login =
      dispatch : ThunkDispatch<RootState , unknown , AnyAction>
      ) : Promise<void> => {
   try {
-    dispatch({
-      type: "USER_LOGIN_SUCCESS",
-    });
+    const payload = {
+       email: email ,
+       password: password
+     }
 
+    dispatch({
+      type: "USER_LOGIN_SUCCESS", 
+      payload 
+    });
+     
   ///fetch data from backend userInfo
 
   } catch (error) {}
 };
+
+
+
+export default loginAction
