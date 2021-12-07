@@ -5,11 +5,13 @@ import Signup from '../views/Signup'
 export const AuthenticationForm = () => {
   const [showLogin, setShowLogin] = useState(true)
 
-  // const _displayLogin = (data: boolean) => {
-  //   setShowLogin(data)
-  // }
-
   return (
-    <>{showLogin ? <Login/> : <Signup />}</>
+    <>
+      {showLogin ? (
+        <Login displayLogin={() => setShowLogin(false)} />
+      ) : (
+        <Signup displaySignUp={() => setShowLogin(true)} />
+      )}
+    </>
   )
 }

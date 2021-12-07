@@ -2,21 +2,25 @@ import React, { useState, useEffect } from 'react'
 import { loginAction } from '../action/userAction'
 import { useDispatch } from 'react-redux'
 
-// interface MyProps {
-//     displayLogin: boolean,
-// }
+ interface MyProps {
+     displayLogin: any,
+ }
 
-const Login = () => {
+const Login = ( props: MyProps ) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoginActive, setIsLoginActive] = useState(false)
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    if (!!email && !!password && isLoginActive) {
-      dispatch(loginAction(email, password))
-    }
-  }, [email, password, isLoginActive])
+  // useEffect(() => {
+  //   if (!!email && !!password && isLoginActive) {
+  //     dispatch(loginAction(email, password))
+  //   }
+  // }, [email, password, isLoginActive])
+
+  const handleLogin = () => {
+    dispatch(loginAction(email, password))
+  }
 
   return (
     <div className="d-flex flex-di-row justify-c-center">
@@ -31,7 +35,7 @@ const Login = () => {
         </div>
         <div className="form-item">
           <input
-            type="text"
+            type="password"
             placeholder="&#xf13e; password"
             onChange={(e) => setPassword(e.target.value)}
           ></input>
@@ -40,12 +44,12 @@ const Login = () => {
         <div className="auth-btn-section">
           <button
             className="auth-primary-btn"
-            onClick={() => setIsLoginActive(true)}
+            onClick={() => handleLogin()}
           >
             ورود
           </button>
           <p>عضو نیستید ؟</p>
-          <button className="auth-outline-btn">ثبت نام</button>
+          <button className="auth-outline-btn" onClick={() => props.displayLogin()}>ثبت نام</button>
         </div>
       </div>
     </div>

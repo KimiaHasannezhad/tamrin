@@ -3,42 +3,56 @@ import {
   USER_LOGIN_SUCCESS,
   USER_LOGIN_FAIL,
   USER_LOGOUT,
-} from "../constants/userConstants";
+} from '../constants/userConstants'
 
-export interface UserState {
-  loading?: boolean;
-  error?: string;
+interface UserState {
+  loading?: any;
+  error?: any;
   unserInfo: {
-    firstname?: string;
-    lastname?: string;
+    firstname?: any;
+    lastname?: any;
   };
 }
 
-export interface Action {
-  type: string;
-  payload?: string;
+interface Action {
+  type: string
+  payload?: any
 }
 
-export const userLoginReducer = (state: UserState, action: Action) => {
+const initialState = {
+  loading:'' ,
+  error: '',
+  unserInfo: {
+    firstname: '',
+    lastname: ''
+  }
+}
+
+const userLoginReducer = (state: UserState = initialState, action: Action) => {
   switch (action.type) {
     case USER_LOGIN_REQUEST:
       return {
         loading: true,
-      };
+      }
     case USER_LOGIN_SUCCESS:
       return {
         loading: false,
         unserInfo: action.payload,
-      };
-    case USER_LOGIN_FAIL:
-      return {
-        loading: false,
-        error: action.payload,
-      };
-    case USER_LOGOUT:
-      return {};
+      }
+    // case USER_LOGIN_FAIL:
+    //   return {
+    //     loading: false,
+    //     error: action.payload,
+    //   }
+    // case USER_LOGOUT:
+    //   return {}
 
     default:
-      return state;
+      return state
   }
-};
+console.log(state)
+
+}
+
+
+export default userLoginReducer
