@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import { loginAction } from '../action/userAction'
+import React, { useState, useEffect} from 'react'
+// import { loginAction } from '../action/userAction'
 import { useDispatch } from 'react-redux'
-
+import {Link} from 'react-router-dom'
+ 
  interface MyProps {
      displayLogin: any,
  }
@@ -10,6 +11,7 @@ const Login = ( props: MyProps ) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoginActive, setIsLoginActive] = useState(false)
+
   const dispatch = useDispatch()
 
   // useEffect(() => {
@@ -19,8 +21,11 @@ const Login = ( props: MyProps ) => {
   // }, [email, password, isLoginActive])
 
   const handleLogin = () => {
-    dispatch(loginAction(email, password))
+    localStorage.setItem("email",email);
+    localStorage.setItem("Password",password);
   }
+
+
 
   return (
     <div className="d-flex flex-di-row justify-c-center">
@@ -46,7 +51,7 @@ const Login = ( props: MyProps ) => {
             className="auth-primary-btn"
             onClick={() => handleLogin()}
           >
-            ورود
+          <Link to='/home'>ورود</Link>
           </button>
           <p>عضو نیستید ؟</p>
           <button className="auth-outline-btn" onClick={() => props.displayLogin()}>ثبت نام</button>

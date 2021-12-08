@@ -50,7 +50,6 @@ const userLoginReducer = (state: UserState = initialState, action: Action) => {
     default:
       return state
   }
-console.log(state)
 
 }
 
