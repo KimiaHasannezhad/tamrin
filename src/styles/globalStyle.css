@@ -6,7 +6,7 @@ html {
 
 body {
   background-color:  #f0f0f0;
-  margin: 0px;
+  margin-top: 100px;
   padding-bottom:60px ;
   font-family: 'BYekan';
   color: rgb(92, 92, 92);
@@ -19,6 +19,16 @@ body {
   font-family: 'BYekan';
   src: url('../assets/font/BYekan.eot') format('eot'), url('../assets/font/BYekan.ttf') format('truetype'),
     url('../assets/font/BYekan.woff') format('woff');
+}
+
+.header-section-parent{
+  top: 0;
+  width: 97%;
+  box-shadow: 1px 0px 13px 7px lightgrey;
+}
+
+.header-section{
+  border-left: 1px solid gray;
 }
 
 .d-flex {
@@ -48,9 +58,37 @@ body {
   justify-content: space-between;
 }
 
+.dir-rtl {
+ direction: rtl;
+}
+
+.dir-ltr {
+ direction: ltr;
+}
+
+.position-fixed{
+  position: fixed;
+}
+
+.w-2 {
+ width: 3%;
+}
+.w-3 {
+ width: 3%;
+}
+.w-4 {
+ width: 4%;
+}
+.w-5 {
+ width: 5%;
+}
 
 .w-10 {
  width: 10%;
+}
+
+.w-15 {
+ width: 15%;
 } 
 
 .w-20 {
@@ -77,23 +115,39 @@ body {
  width: 80%;
 } 
 .w-90 {
- width: 80%;
+ width: 90%;
 } 
 .w-100 {
- width: 80%;
+ width: 100%;
 } 
 
 
+.margin-5 {
+  margin: 5px;
+}
+.margin-10 {
+  margin: 10px;
+}
 .margin-20 {
   margin: 20px;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.padding-10 {
+  padding: 10px;
+}
 .padding-20 {
   padding: 20px;
 }
 
 .bg-white {
   background-color: white;
+}
+.bg-lightblue {
+  background-color: #edf9ff;
 }
 
 .border-radius-normal{
@@ -104,3 +158,58 @@ body {
    box-shadow: 3px 4px 6px 9px lightgray ;
 }
 
+.btn-outline {
+  border: 1px solid dodgerblue;
+  background-color: white;
+  color: dodgerblue;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: 'BYekan';
+}
+.btn-no-border {
+  border:none;
+  background-color: white;
+  color: dodgerblue;
+  padding: 12px;
+  cursor: pointer;
+  font-family: 'BYekan';
+}
+
+.align-items-center {
+  align-items: center;
+}
+.align-items-flex-start{
+  align-items: flex-start;
+}
+
+.no-margin{
+  margin: 0px;
+}
+
+
+.font-small {
+ font-size: 12px ;
+}
+.font-normal {
+ font-size: 16px ;
+}
+.font-large {
+ font-size: 20px ;
+}
+
+.font-light {
+  font-weight: lighter;
+} 
+.font-bold {
+  font-weight: bold;
+} 
+
+.text-align-right {
+  text-align :right
+}
+.text-align-center {
+  text-align :center
+}
+.text-align-left {
+  text-align :left
+}

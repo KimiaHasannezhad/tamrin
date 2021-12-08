@@ -1,0 +1,14 @@
+.customized-text-input {
+ border: none;
+font-family: 'BYekan';
+outline: none;
+color: gray;
+}
+
+.profile-pic{
+    border-radius: 29px;
+}
+
+.add-file-section {
+    border-radius: 0px 0px 15px 15px;
+}
