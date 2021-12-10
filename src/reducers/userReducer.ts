@@ -1,57 +1,59 @@
-import {
-  USER_LOGIN_REQUEST,
-  USER_LOGIN_SUCCESS,
-  USER_LOGIN_FAIL,
-  USER_LOGOUT,
-} from '../constants/userConstants'
+// import {
+//   USER_LOGIN_REQUEST,
+//   USER_LOGIN_SUCCESS,
+//   USER_LOGIN_FAIL,
+//   USER_LOGOUT,
+// } from '../constants/userConstants'
 
-interface UserState {
-  loading?: any;
-  error?: any;
-  unserInfo: {
-    firstname?: any;
-    lastname?: any;
-  };
-}
+// interface UserState {
+//   loading?: any;
+//   error?: any;
+//   unserInfo: {
+//     firstname?: any;
+//     lastname?: any;
+//   };
+// }
 
-interface Action {
-  type: string
-  payload?: any
-}
+// interface Action {
+//   type: string
+//   payload?: any
+// }
 
-const initialState = {
-  loading:'' ,
-  error: '',
-  unserInfo: {
-    firstname: '',
-    lastname: ''
-  }
-}
+// const initialState = {
+//   loading:'' ,
+//   error: '',
+//   unserInfo: {
+//     firstname: '',
+//     lastname: ''
+//   }
+// }
 
-const userLoginReducer = (state: UserState = initialState, action: Action) => {
-  switch (action.type) {
-    case USER_LOGIN_REQUEST:
-      return {
-        loading: true,
-      }
-    case USER_LOGIN_SUCCESS:
-      return {
-        loading: false,
-        unserInfo: action.payload,
-      }
-    // case USER_LOGIN_FAIL:
-    //   return {
-    //     loading: false,
-    //     error: action.payload,
-    //   }
-    // case USER_LOGOUT:
-    //   return {}
+// const userLoginReducer = (state: UserState = initialState, action: Action) => {
+//   switch (action.type) {
+//     case USER_LOGIN_REQUEST:
+//       return {
+//         loading: true,
+//       }
+//     case USER_LOGIN_SUCCESS:
+//       return {
+//         loading: false,
+//         unserInfo: action.payload,
+//       }
+//     // case USER_LOGIN_FAIL:
+//     //   return {
+//     //     loading: false,
+//     //     error: action.payload,
+//     //   }
+//     // case USER_LOGOUT:
+//     //   return {}
 
-    default:
-      return state
-  }
+//     default:
+//       return state
+//   }
 
-}
+// }
 
 
-export default userLoginReducer
+// export default userLoginReducer
+
+export {}

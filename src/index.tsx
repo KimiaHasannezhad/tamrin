@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import store from './store'
+// import { Provider } from 'react-redux'
+// import store from './store'
 import './styles/globalStyle.css'
 import './styles/auth.css'
 import './styles/hashtags.css'
@@ -16,15 +16,15 @@ import { AuthenticationForm } from './containers/AuthenticationForm'
 import { createBrowserHistory } from 'history'
 
 ReactDOM.render(
-  <Provider store={store}>
+  // <Provider>
     <BrowserRouter>
-      {window.location.pathname.includes('auth') ? <div></div> : <Header /> }
+      {window.location.pathname.includes('/auth') ? <div></div> : <Header /> }
       <Switch>
-        <Route exact path="/" render={() => <Redirect to="/auth" />} />
+        {/* <Route exact path="/" render={() => <Redirect to="/auth" />} /> */}
         <Route exact path="/auth" component={AuthenticationForm} />
         <Route exact path="/home" component={Home} />
       </Switch>
-    </BrowserRouter>
-  </Provider>,
+    </BrowserRouter>,
+  //  </Provider>,
   document.getElementById('root'),
 )

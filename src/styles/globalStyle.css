@@ -79,8 +79,9 @@ body {
 .w-4 {
  width: 4%;
 }
+
 .w-5 {
- width: 5%;
+ width: 5% !important;
 }
 
 .w-10 {

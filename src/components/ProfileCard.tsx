@@ -19,7 +19,7 @@ const ProfileCard = (props: MyProps) => {
         <p className="font-normal font-bold no-margin">{props.userName}</p>
         <p className="font-small font-light no-margin">interior designer </p>
       </div>
-      <Link to="/auth">
+      <Link to="/">
       <button
         className="btn-no-border margin-20"
         onClick={() => {
