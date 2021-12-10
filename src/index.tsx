@@ -18,9 +18,9 @@ import { createBrowserHistory } from 'history'
 ReactDOM.render(
   // <Provider>
     <BrowserRouter>
-      {window.location.pathname.includes('/auth') ? <div></div> : <Header /> }
+      {window.location.pathname.includes('/') || window.location.pathname.includes('/auth') ? <div></div> : <Header /> }
       <Switch>
-        {/* <Route exact path="/" render={() => <Redirect to="/auth" />} /> */}
+        <Route exact path="/" render={() => <Redirect to="/auth" />} />
         <Route exact path="/auth" component={AuthenticationForm} />
         <Route exact path="/home" component={Home} />
       </Switch>
