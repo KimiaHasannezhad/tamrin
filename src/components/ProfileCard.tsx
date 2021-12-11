@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import userpicture from '../assets/img/profile-picture.svg'
 import {Link} from 'react-router-dom'
 
@@ -7,6 +7,8 @@ interface MyProps {
 }
 
 const ProfileCard = (props: MyProps) => {
+const [name , setName] = useState<any>(localStorage.getItem('userInfo'))
+
   const handleLogOut = () => {
     localStorage.clear();
   }
@@ -16,7 +18,7 @@ const ProfileCard = (props: MyProps) => {
       <div className="profile-bg"></div>
       <div className="d-flex flex-dir-col justify-c-center align-items-center">
         <img className="profile-pic-card w-20" src={userpicture}></img>
-        <p className="font-normal font-bold no-margin">{props.userName}</p>
+        <p className="font-normal font-bold no-margin">{JSON.parse(name)[0].username}</p>
         <p className="font-small font-light no-margin">interior designer </p>
       </div>
       <Link to="/">

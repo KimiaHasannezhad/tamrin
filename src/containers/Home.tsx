@@ -8,7 +8,7 @@ import CreateNewPost from '../components/CreateNewPost'
 //   displaySignUp: any
 // }
 
-const Home = () => {
+const Home = () => { 
   const [name, setName] = useState(localStorage.getItem('username'))
 
   return (

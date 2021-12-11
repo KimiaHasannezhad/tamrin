@@ -17,6 +17,7 @@ const Signup = (props: MyProps) => {
 
   const handleSignup = () => {
     if (!!_username && !!_userPassword) {
+      localStorage.setItem('userInfo', JSON.stringify([{username: _username} , {password:_userPassword}]))
       props.displaySignUp(false)
     } else {
       window.alert('تمامی فیلد ها را پر کنید')

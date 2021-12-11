@@ -31,24 +31,13 @@ export const AuthenticationForm = () => {
     setLoginPassword(data)
   }
 
-  // useEffect(() => {
-  //   if (compare) {
-  //     compareAuthData(name, password, loginName, loginPassword)
-  //   } 
-  // }, [compare, name, password, loginName, loginPassword])
-
-  const compareAuthData = (
-    name: any,
-    password: any,
-    loginUsername: any,
-    loginPassword: any,
-  ) => {
-    if ( name === loginName && password === loginPassword) {
-      setAllowLogin(true)
-    } else {
-      window.alert ('نام کاربری یا کلمه عبور اشتباه است')
-    }
+  const loginAllownece = (data) => {
+    setAllowLogin(data)
   }
+
+  useEffect (()=>{
+      localStorage.setItem('allowLogin', false.toString())
+  })
 
   return (
     <>
@@ -68,11 +57,14 @@ export const AuthenticationForm = () => {
             displayLogin={() => setShowLogin(true)}
             setLoginUsername={setLoginUsername}
             setLoginUserPassword={setLoginUserPassword}
-            allowLogin={allowLogin}
+            loginAllownece={loginAllownece}
             setCompare={setCompare}
+            name={name}
+            password={password}
           />
         </LoginContext.Provider>
       )}
+      {/* {compare && compareAuthData(name, password, loginName, loginPassword)} */}
     </>
   )
 }
