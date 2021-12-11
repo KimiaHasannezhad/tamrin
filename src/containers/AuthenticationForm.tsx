@@ -66,7 +66,6 @@ export const AuthenticationForm = () => {
           />
         </LoginContext.Provider>
       )}
-      {/* {compare && compareAuthData(name, password, loginName, loginPassword)} */}
     </>
   )
 }

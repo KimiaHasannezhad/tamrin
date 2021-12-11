@@ -3,8 +3,6 @@ import { SignupContext } from '../context/SignupContext'
 
 interface MyProps {
   displaySignUp: any
-  // username?: any
-  // password?: any;
   setUsername(username: any): any
   setUserPassword(password: any): any
 }

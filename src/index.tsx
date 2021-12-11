@@ -1,7 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import { Provider } from 'react-redux'
-// import store from './store'
 import './styles/globalStyle.css'
 import './styles/auth.css'
 import './styles/hashtags.css'
@@ -15,7 +13,6 @@ import Header from './components/Header'
 import { AuthenticationForm } from './containers/AuthenticationForm'
 import { createBrowserHistory } from 'history'
 import { LoginContext } from './context/LoginContext'
-
 
 ReactDOM.render(
   <BrowserRouter >
