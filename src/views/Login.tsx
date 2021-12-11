@@ -10,7 +10,7 @@ interface MyProps {
   password?: any
   loginUsername?: any
   loginPassword?: any
-  loginAllownece(data: boolean): any
+  allowLogin: boolean
   setLoginUsername(username: any): any
   setLoginUserPassword(password: any): any
   setCompare(compare: boolean): any
@@ -32,7 +32,7 @@ const Login = (props: MyProps) => {
       ) {
         localStorage.setItem('allowLogin', true.toString())
         history.push('./home')
-        // props.loginAllownece(true)
+        window.location.reload()
       } else {
         window.alert('نام کاربری یا کلمه عبور اشتباه است')
       }
@@ -67,15 +67,11 @@ const Login = (props: MyProps) => {
           <a href="#">فراموشی رمز عبور</a>
         </div>
         <div className="auth-btn-section">
-          <button
-            // className={
-            //  props.allowLogin ? 'auth-primary-btn' : 'auth-primary-btn-disabled'
-            // }
-            className="auth-primary-btn"
-            onClick={() => handleLogin()}
-          >
-            ورود
-          </button>
+
+            <button className="auth-primary-btn" onClick={() => handleLogin()}>
+              ورود
+            </button>
+        
           <p>عضو نیستید ؟</p>
           <button
             className="auth-outline-btn"

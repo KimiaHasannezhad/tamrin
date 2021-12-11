@@ -57,7 +57,7 @@ export const AuthenticationForm = () => {
             displayLogin={() => setShowLogin(true)}
             setLoginUsername={setLoginUsername}
             setLoginUserPassword={setLoginUserPassword}
-            loginAllownece={loginAllownece}
+            allowLogin={allowLogin}
             setCompare={setCompare}
             name={name}
             password={password}

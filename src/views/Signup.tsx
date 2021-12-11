@@ -40,7 +40,7 @@ const Signup = (props: MyProps) => {
         </div>
         <div className="form-item">
           <input
-            type="text"
+            type="password"
             placeholder="&#xf13e; password"
             onChange={(e) => {
               props.setUserPassword(e.target.value)

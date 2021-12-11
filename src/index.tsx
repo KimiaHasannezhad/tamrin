@@ -16,8 +16,9 @@ import { AuthenticationForm } from './containers/AuthenticationForm'
 import { createBrowserHistory } from 'history'
 import { LoginContext } from './context/LoginContext'
 
+
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter >
     {window.location.pathname.includes('/') ? <div></div> : <Header />}
     <Switch>
       <Route exact path="/" render={() => <Redirect to="/auth" />} />
