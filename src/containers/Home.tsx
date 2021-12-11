@@ -3,6 +3,7 @@ import Hashtags from '../components/Hashtags'
 import Communications from '../components/Communications'
 import ProfileCard from '../components/ProfileCard'
 import CreateNewPost from '../components/CreateNewPost'
+import Posts from '../components/Posts'
 
 // interface MyProps {
 //   displaySignUp: any
@@ -18,6 +19,7 @@ const Home = () => {
       </div>
       <div className="w-50 margin-20 bg-white  border-radius-normal ">
         <CreateNewPost />
+        <Posts/>
       </div>
       <div className="w-30 border-radius-normal d-flex flex-dir-col">
         <div className="d-flex flex-dir-col">
