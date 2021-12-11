@@ -35,8 +35,10 @@ export const AuthenticationForm = () => {
     setAllowLogin(data)
   }
 
-  useEffect (()=>{
-      localStorage.setItem('allowLogin', false.toString())
+  useEffect(() => {
+    localStorage.setItem('allowLogin', false.toString())
+    localStorage.setItem('showHeader', false.toString())
+
   })
 
   return (

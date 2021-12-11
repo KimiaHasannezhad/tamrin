@@ -25,19 +25,24 @@ const Login = (props: MyProps) => {
   )
 
   const handleLogin = () => {
-    if (!!loginUsername && !!loginPassword) {
-      if (
-        loginUsername === JSON.parse(userInfo)[0].username &&
-        loginPassword === JSON.parse(userInfo)[1].password
-      ) {
-        localStorage.setItem('allowLogin', true.toString())
-        history.push('./home')
-        window.location.reload()
+    if (!!userInfo) {
+      if (!!loginUsername && !!loginPassword) {
+        if (
+          loginUsername === JSON.parse(userInfo)[0].username &&
+          loginPassword === JSON.parse(userInfo)[1].password
+        ) {
+          localStorage.setItem('allowLogin', true.toString())
+          localStorage.setItem('showHeader', true.toString())
+          history.push('./home')
+          window.location.reload()
+        } else {
+          window.alert('نام کاربری یا کلمه عبور اشتباه است')
+        }
       } else {
-        window.alert('نام کاربری یا کلمه عبور اشتباه است')
+        window.alert('تمامی فیلد ها  رو پر کنید')
       }
     } else {
-      window.alert('تمامی فیلد ها  رو پر کنید')
+      window.alert('شما هنوز ثبت نام نکرده اید')
     }
   }
 
@@ -67,11 +72,10 @@ const Login = (props: MyProps) => {
           <a href="#">فراموشی رمز عبور</a>
         </div>
         <div className="auth-btn-section">
+          <button className="auth-primary-btn" onClick={() => handleLogin()}>
+            ورود
+          </button>
 
-            <button className="auth-primary-btn" onClick={() => handleLogin()}>
-              ورود
-            </button>
-        
           <p>عضو نیستید ؟</p>
           <button
             className="auth-outline-btn"

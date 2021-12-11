@@ -1,4 +1,4 @@
-import React, { useEffect ,useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import Hashtags from '../components/Hashtags'
 import Communications from '../components/Communications'
 import ProfileCard from '../components/ProfileCard'
@@ -8,9 +8,9 @@ import CreateNewPost from '../components/CreateNewPost'
 //   displaySignUp: any
 // }
 
-const Home = () => { 
+const Home = () => {
   const [name, setName] = useState(localStorage.getItem('username'))
-
+  useEffect(() => window.scrollTo(0, 0))
   return (
     <div className="d-flex flex-di-row justify-c-center align-items-flex-start">
       <div className="w-20 margin-20 bg-white padding-20 border-radius-normal">

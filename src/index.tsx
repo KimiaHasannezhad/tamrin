@@ -19,7 +19,7 @@ import { LoginContext } from './context/LoginContext'
 
 ReactDOM.render(
   <BrowserRouter >
-    {window.location.pathname.includes('/') ? <div></div> : <Header />}
+    {localStorage.getItem('showHeader') === 'false' ? '' : <Header />}
     <Switch>
       <Route exact path="/" render={() => <Redirect to="/auth" />} />
       <Route exact path="/auth" component={AuthenticationForm} />

@@ -11,6 +11,7 @@ const [name , setName] = useState<any>(localStorage.getItem('userInfo'))
 
   const handleLogOut = () => {
     localStorage.clear();
+    window.location.reload()
   }
 
   return (
