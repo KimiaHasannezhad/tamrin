@@ -5,11 +5,11 @@ interface MyProps {
   addPosts: any
 }
 const AddPosts = (props: MyProps) => {
-  const [content, setContent] = useState('')
+  const [content, setContent] = useState<any>('')
   // const postsList = useContext<any>(PostContext)
   // const postsList = [' my First Post', ' my second Post', ' my third Post']
 
-  const handleCreateContent = (myContent) => {
+  const handleCreateContent = (myContent: any) => {
     setContent(myContent)
   }
 

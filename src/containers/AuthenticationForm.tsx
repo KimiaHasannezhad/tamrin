@@ -31,7 +31,7 @@ export const AuthenticationForm = () => {
     setLoginPassword(data)
   }
 
-  const loginAllownece = (data) => {
+  const loginAllownece = (data: any) => {
     setAllowLogin(data)
   }
 

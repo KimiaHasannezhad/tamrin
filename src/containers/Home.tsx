@@ -15,7 +15,7 @@ const Home = () => {
   ])
   const [showPostsList, setShowPostsList] = useState(false)
 
-  const addPosts = (item) => {
+  const addPosts = (item : any) => {
     setPosts((posts) => [...posts, item])
   }
 
